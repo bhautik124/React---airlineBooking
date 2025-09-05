@@ -4,54 +4,55 @@ import { PiAirplaneInFlightFill } from "react-icons/pi";
 
 const Nav = () => {
   return (
-    <div className="absolute z-10 w-full p-2 mt-[-0.5%]">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center text-5xl ml-[5%] text-black">
+    <div className="absolute z-10 w-full px-4 py-2 sm:py-3">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex items-center text-3xl sm:text-4xl md:text-5xl text-black">
           <PiAirplaneInFlightFill />
           <h3 className="font-sans ml-2">JetZ</h3>
         </div>
-        <div className="flex mr-[10%]">
+
+        <div className="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-4">
           <NavLink
             to="/"
-            style={(e) => ({
-              fontWeight: e.isActive ? "bold" : "",
-              color: e.isActive ? "#7D5036" : "",
-              textShadow: e.isActive
-                ? "2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000"
-                : "",
-            })}
+            className={({ isActive }) =>
+              `text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-3 sm:px-5 py-2 transition-colors ${
+                isActive
+                  ? "font-bold text-[#7D5036] [text-shadow:2px_2px_0_#000,-2px_-2px_0_#000,2px_-2px_0_#000,-2px_2px_0_#000]"
+                  : "text-black hover:text-[#7D5036]"
+              }`
+            }
           >
-            <div className="text-4xl p-5 uppercase">Home</div>
+            Home
           </NavLink>
 
           <NavLink
             to="/bookings"
-            style={(e) => ({
-              fontWeight: e.isActive ? "bold" : "",
-              color: e.isActive ? "#7D5036" : "",
-              textShadow: e.isActive
-                ? "2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000"
-                : "",
-            })}
+            className={({ isActive }) =>
+              `text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-3 sm:px-5 py-2 transition-colors ${
+                isActive
+                  ? "font-bold text-[#7D5036] [text-shadow:2px_2px_0_#000,-2px_-2px_0_#000,2px_-2px_0_#000,-2px_2px_0_#000]"
+                  : "text-black hover:text-[#7D5036]"
+              }`
+            }
           >
-            <div className="text-4xl p-5 uppercase">Bookings</div>
+            Bookings
           </NavLink>
 
           <NavLink
             to="/about"
-            style={(e) => ({
-              fontWeight: e.isActive ? "bold" : "",
-              color: e.isActive ? "#7D5036" : "",
-              textShadow: e.isActive
-                ? "2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000"
-                : "",
-            })}
+            className={({ isActive }) =>
+              `text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-3 sm:px-5 py-2 transition-colors ${
+                isActive
+                  ? "font-bold text-[#7D5036] [text-shadow:2px_2px_0_#000,-2px_-2px_0_#000,2px_-2px_0_#000,-2px_2px_0_#000]"
+                  : "text-black hover:text-[#7D5036]"
+              }`
+            }
           >
-            <div className="text-4xl p-5 uppercase">About</div>
+            About
           </NavLink>
         </div>
       </div>
-      <div className="border-b-4 border-[#7D5036]"></div>
+      <div className="border-b-4 border-[#7D5036] mt-2"></div>
     </div>
   );
 };
