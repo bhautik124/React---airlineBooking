@@ -7,7 +7,7 @@ const Home = () => {
     <div className="w-full h-screen relative overflow-hidden">
       <img
         className="w-full h-full object-cover"
-        src="src/components/Untitled design.png"
+        src="Untitled design.png"
         alt="Airplane in sky"
       />
 
